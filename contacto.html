@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-  <html lang="es">
-  <head>
-    <title>Formularios</title>
-	<meta charset="utf-8">
+<html lang="es">
+	<head>
+		<title>Formularios</title>
 		<meta charset="utf-8">
 		<meta name="description" content="Formulario">
 		<meta content="width=device-width, initial-scale=1, minimum-scale=1" name="viewport">
@@ -12,24 +11,34 @@
 		<title>Formulario</title>
 		<link href="movil.css" rel="stylesheet" media="all and (min-width:0px) and (max-width: 480px)" />
 		<link href="tablet.css" rel="stylesheet" media="all and (min-width: 481px) and (max-width: 800px)" />
-		<link href="escritorio.css" rel="stylesheet" media="all and (min-width: 801px)" />	
-    </head>
-  </head>
-  <body>
-    <section>
-	  <form action="enviaremail.php" name="contacto" id="miformulario" method="get">
+		<link href="escritorio.css" rel="stylesheet" media="all and (min-width: 801px)" />
+		<script src="javascriptcontacto.js"></script>	
+    	</head>
+	<body>
+		<section>
+			<form action="enviaremail.php" name="contacto" id="miformulario" method="post">
 
-		     <p class="etiqueta">Nombre:</p>
-		   	<p class="campo"><input type="text" name="minombre" id="minombre" required></p>
-				
-		      <p class="etiqueta">Email:</p> 
-		      <p class="campo"><input type="email" name="micorreo" id="micorreo" multiple required></p>
-		     	  
-			  <p class="etiqueta">Comentarios</p>
-			  <p class="campo"><textarea name="micomentario" id="micomentario" cols="15" rows="4" ></textarea ></p>
+				<p class="etiqueta">Nombre:</p>
+				<p class="campo"><input type="text" name="minombre" id="minombre" required></p>
+		
+				<p class="etiqueta">Email:</p> 
+				<p class="campo"><input type="email" name="micorreo" id="micorreo" multiple required></p>
 
-        <p class="campo"><input type="submit" value="enviar"></p>
-      </form>
-    </section>
-  </body>
+				<p class="etiqueta">Celular:</p> 
+				<p class="campo"><input type="tel" name="micelular" id="micelular"></p>
+
+				<p class="etiqueta">Teléfono fijo:</p> 
+				<p class="campo"><input type="tel" name="mitelefonofijo" id="mitelefonofijo"></p>
+			  
+				<p class="etiqueta">Rango de Edad:</p>
+				<input class="rangoedad" type="range" name="miedad" id="miedad" min="0" max="80" step="20" value="20">
+				<output id="rango">0 hasta 20</output>		  
+			  
+				<p class="etiqueta">Comentarios</p>
+				<p class="campo"><textarea name="micomentario" id="micomentario" cols="15" rows="4" required></textarea></p>
+
+				<p class="campo"><input type="submit" value="enviar"></p>
+			</form>
+		</section>
+  	</body>
 </html>
